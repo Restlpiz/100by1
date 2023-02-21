@@ -1,0 +1,44 @@
+﻿
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Далее может идти подключение любого другого CSS файла сайта -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="page">
+        <form>
+            <div style="padding-top: 15%;">
+                <input  type="text" name="nUser" class="username form-control" placeholder="Имя" style="width: 40%; margin: 0 0 0 30%;"/>
+                <input type="text" name="username" class="username form-control inpdata" placeholder="Логин" />
+                <input type="password" name="password" class="password form-control inpdata" placeholder="Пароль" />
+            </div>
+            
+            <input class="btn reg inpdata" style="" type="submit" value="Зарегистрироваться" />
+
+        </form>
+    </div>
+</body>
+
+<style>
+
+    .page {
+        width: 100%;
+        height:100%;
+        background: linear-gradient(to bottom right,#F87E7B,#B05574);
+    }
+
+    .reg
+    {
+        background-color:lightgreen;
+        border-radius: 2%;
+        border: 1px solid white;
+    }
+
+    .inpdata {
+
+        margin: 3% 0 0 30%;
+        width: 40%;
+    }
+</style>

@@ -18,5 +18,11 @@ namespace Game100by1.Controllers
         {
             return Json("student saved successfully");
         }
+
+        [HttpGet]
+        public ActionResult Registration()
+        {
+            return View();
+        }
     }
 }

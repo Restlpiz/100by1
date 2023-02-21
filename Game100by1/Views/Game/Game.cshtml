@@ -30,7 +30,7 @@
                                 <input type="text" name="username" class="username form-control" placeholder="Логин" />
                                 <input type="password" name="password" class="password form-control" placeholder="Пароль" />
 
-                                <a class="col-lg-6" style="float:left; margin-top: 1%;">Регистрация</a>
+                                <a id="reg" class="col-lg-6" style="float:left; margin-top: 1%;">Регистрация</a>
                                 <input class="btn login col-lg-6" style="float:right" type="submit" value="Войти" />
 
                             </form>
@@ -234,6 +234,23 @@
                 document.getElementById("SendMessage").disabled = false;
             }
         }
+
+        document.getElementById("reg").addEventListener("click", getRegistration);
+
+        function getRegistration() {
+            $.ajax({
+                url: "/Game/Registration",
+                type: "GET",
+                data: null,
+                success: function (response) {
+                    
+                },
+                error: function (request, status, error) {
+                    alert(request.responseText);
+                }
+            });
+        }
+
 
     </script>
 </body>
