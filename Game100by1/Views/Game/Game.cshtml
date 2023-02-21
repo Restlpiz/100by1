@@ -1,0 +1,239 @@
+﻿@{
+    Layout = null;
+}
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Далее может идти подключение любого другого CSS файла сайта -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="container-fluid" style="width:50%; height:100%; background-color:aliceblue; border-radius: 3px;">
+        <nav class="active" style="padding: 1%; background: linear-gradient(to top left, powderblue, pink); border-radius: 10px ">
+            <button class="btn btn-outline-info">
+                <i class="bi bi-list"></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </button>
+            <button id="authButton" style="float: right; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Login</button>
+            <div id="login" class="trash modal" role="dialog" style="">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body row">
+                            <button data-dismiss="modal" class="close" style="width: 3%;float:right; background-color: red; color:white; border-radius:100%; border:1px solid white;  margin-left:93%;">X</button>
+                            <h4 style="text-align:center">Вход в систему</h4>
+                            <hr style="color:white" />
+                            <form>
+                                <input type="text" name="username" class="username form-control" placeholder="Логин" />
+                                <input type="password" name="password" class="password form-control" placeholder="Пароль" />
+
+                                <a class="col-lg-6" style="float:left; margin-top: 1%;">Регистрация</a>
+                                <input class="btn login col-lg-6" style="float:right" type="submit" value="Войти" />
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+        <div id="question" style="background: linear-gradient(to top left, #C0F400, #FFCA00); border-radius: 10px 10px 0px 0px ; margin-top: 4%">
+            <p style="text-align:center; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight:bold; margin: 0; font-size: 25px; color: white">58. Что может быть круглосуточным?</p>
+        </div>
+        <div style="text-align: center; background: linear-gradient(to top left, powderblue, pink); border-radius: 0px 0px 10px 10px ">
+            <button id="id1" class="btn btn-primary" style="width: 90%; padding-bottom: 1%; margin-top: 1%" disabled>1</button>
+
+            <button id="id2" class="btn btn-primary" style="width: 90%; padding-bottom: 1%;margin-top: 1%" disabled>2</button>
+
+            <button id="id3" class="btn btn-primary" style="width:90%; padding-bottom: 1%; margin-top: 1%" disabled>3</button>
+            <button id="id4" class="btn btn-primary" style="width: 90%; padding-bottom: 1%; margin-top: 1%" disabled>4</button>
+            <button id="id5" class="btn btn-primary" style="width: 90%; padding-bottom: 1%; margin-top: 1%" disabled>5</button>
+            <button id="id6" class="btn btn-primary" style="width: 90%; padding-bottom: 1%; margin-top: 1%; margin-bottom: 1%" disabled>6</button>
+        </div>
+        <div style="margin-top: 5%;" class="row">
+
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="Answer" aria-describedby="emailHelp" placeholder="Введите ответ" style="background: linear-gradient(to top left, powderblue, pink); border-radius: 15px; opacity: 50%; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            </div>
+
+            <div class="col-lg-2">
+                <button type="button" id="SendMessage" style="background: linear-gradient(to top left, powderblue, pink); width:70px; height:35px; border-radius: 15px; opacity: 50%; border:none; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin: 1em 0">
+                    <i class="bi bi-arrow-right-circle"></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle " viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <!-- Модальное окно -->
+
+
+    <style>
+        #Answer:focus {
+            color: blue;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .trash {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            transition: .3s;
+            top: -1000px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            overflow-y: scroll;
+            padding: 60px 15px;
+        }
+
+        .modal_active {
+            position: fixed;
+            top: 0;          
+            visibility: visible;
+            opacity: 1;
+            transition: .3s;
+        }
+
+        h4 {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .close {
+            color: #fff;
+            transform: scale(1.2)
+        }
+
+        .modal-content {
+            font-weight: bold;
+            background: linear-gradient(to bottom right,#F87E7B,#B05574);
+        }
+
+        .form-control {
+            margin: 1em 0;
+        }
+
+            .form-control:hover, .form-control:focus {
+                box-shadow: none;
+                border-color: #fff;
+            }
+
+        .username, .password {
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            border-bottom: 2px solid #eee;
+            padding-left: 0;
+            font-weight: normal;
+            background: transparent;
+        }
+
+        .form-control::-webkit-input-placeholder {
+            color: #eee;
+        }
+
+        .form-control:focus::-webkit-input-placeholder {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .login {
+            padding: 6px 20px;
+            border-radius: 20px;
+            background: none;
+            border: 2px solid #FAB87F;
+            color: #FAB87F;
+            font-weight: bold;
+            transition: all .5s;
+            
+        }
+
+            .login:hover {
+                background: #FAB87F;
+                color: #fff;
+            }
+    </style>
+
+    <script>
+        document.getElementById("SendMessage").addEventListener("click", SendMessage);
+
+        function SendMessage() {
+
+            let authUser = true;
+            console.log($("#Answer").val());
+            if (document.getElementById("auth").textContent == "Войти") {
+                authUser = false;
+            }
+
+            let data = {
+                input: $("#Answer").val(),
+                auth: authUser,
+                numberQuestion: document.getElementsByTagName("p")['0'].textContent.split('.')[0],
+            }
+
+            console.log(data);
+            $.ajax({
+                url: "/Game/Information",
+                type: "POST",
+                data: data,
+                success: function (response) {
+                    alert(response);
+                },
+                error: function (request, status, error) {
+                    alert(request.responseText);
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            console.log("ready")
+            $('#authButton').click(function (event) { // лoвим клик пo ссылки с id="go"
+                event.preventDefault(); // выключaем стaндaртную рoль элементa
+
+            });
+            if ($("#Answer").val() == "") {
+                document.getElementById("SendMessage").disabled = true;
+            }
+            else {
+                document.getElementById("SendMessage").disabled = false;
+            }
+        });
+
+
+        $(function () {
+            $('#authButton').click(function () {
+                console.log("123");
+                $('.trash').addClass('modal_active');
+            });
+
+            $('.close').click(function () {
+                $('.trash').removeClass('modal_active');
+            });
+        });
+
+
+        document.getElementById("Answer").oninput = function () {
+
+            if ($("#Answer").val() == "") {
+                document.getElementById("SendMessage").disabled = true;
+            }
+            else {
+                document.getElementById("SendMessage").disabled = false;
+            }
+        }
+
+    </script>
+</body>
